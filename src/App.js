@@ -1,18 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Products from "./Components/Products";
-import Home from "./Components/Home";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer"
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Product from "./components/Product";
+import ProductInfo from "./components/ProductInfo";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
     <Navbar />
       <Routes>
-        <Route index ="/" element={<Home />} />
-        <Route exact path="products" element={<Products />} />
+      <Route exact path="/" element={<Home />} />
+      <Route path="/products" element={<Product />} />
+        <Route exact path="/products/:id" element={<ProductInfo />} />
       </Routes>
       <Footer />
     </>

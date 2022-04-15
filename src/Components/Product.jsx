@@ -50,7 +50,7 @@ const Product = () => {
                                     <div className="card-body text-center">
                                         <h5 className="card-title">{item.title}</h5>
                                         <p className="lead">
-                                            ${item.price}
+                                            {item.price} kr
                                         </p>
                                         <NavLink to={`/products/${item.id}`} className="btn btn-outline-dark">Se mer...</NavLink>
                                     </div>
