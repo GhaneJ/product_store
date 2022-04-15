@@ -44,21 +44,12 @@ const Cart = () => {
         );
     }
 
-    const button = () => {
-        return (
-            <div className="container">
-                <div className="row">
-                    <NavLink to="/checkout" className="btn btn-outline-primary mb-5 w-25 mx-auto">Gå vidare till kassan!</NavLink>
-                </div>
-            </div>
-        );
-    }
+   
 
     return (
         <>
             {state.length === 0 && emptyCart()}
             {state.length !== 0 && state.map(cartItems)}
-            {state.length !== 0 && button()}
         </>
     )
 }
